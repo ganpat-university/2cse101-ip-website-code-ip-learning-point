@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>sign up</title>
+
+<script type="text/javascript">// Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.password1.value; 
+                password2 = form.password2.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                   
+                    return true; 
+                } 
+            } </script>
+<link rel="stylesheet" type="text/css" href="index.css">
+<style>
+body{
+background-color:blue;
+}
+table{
+
+
+
+
+}
+fieldset{
+margin-top:50px;
+margin-left:500px;
+width:250px;
+border-color:orange;
+border-radius: 20px;
+box-shadow:5px 5px 5px orange;
+}
+th{
+color:white;
+}
+h3{
+color:white;
+font-size: 20px;
+}
+hr{
+text-decoration:none;
+}
+a{
+color:orange;
+}
+a:hover{
+color:white;
+}
+img{ 
+border-radius:50%;
+border-color:black;
+ }
+ input{
+ 	border-radius: 5px;
+ }
+input:hover{
+	background-color: orange;
+	color:black;
+	border-radius:5px;
+}
+
+#submit{
+	border-radius:5px;
+	background-color: orange;
+	border-color: blue;
+	color:black;
+}
+#submit:hover{
+background-color: black;
+	box-shadow:2px 2px 2px orange;
+color:orange;
+}
+</style>
+
+</head>
+<body>
+        <div>
+<ul>
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="teaching.html">Learning Point</a></li>
+  <li><a href="project1.html">Doubt Point</a></li>
+  <li><a href="sign in.html">Sign in</a></li>
+  <li><a  class="active" href="sign up.html">Sign up</a></li>
+   <li style="float:right"><a   href="about us.html">About us</a></li>
+  
+  
+</ul></div>
+<form method="post" action="teaching.html" onsubmit="return checkPassword(this)">
+<fieldset>
+<table border=0>
+<legend align="center"><img src="5.jpg" height="100" width="100"></legend>
+<tr><td colspan="2" ><center><h3>Login Here!!</h3></center><p></p></td></tr>
+<tr><th>
+<label>Name:</label><p></p></th>
+<td><input type="name" placeholder="Enter Your Name" required><p></p>
+</td></tr>
+<tr><th>
+<label>Mobile No.:</label><p></p></th>
+<td><input type="text" placeholder="Enter Your Mobile Number" pattern="[0-9]*{10}" maxlength="10"   required><p></p>
+</td></tr>
+<tr><th>
+<label>E-mail:</label><p></p></th>
+<td><input type="email" placeholder="Enter Your E-mail" required><p></p>
+</td></tr>
+<tr><th>Password:<p></p></th>
+<th><input type="password" placeholder="Enter Your Password" name="password1" required><p></p></th></tr>
+
+<tr><th>Confirm Password:<p></p></th>
+<th><input type="password" placeholder="Enter Your Password" name="password2"required ><p></p></th></tr>
+<tr><th colspan="2"><input type="submit" value="Login" id="submit"><p></p></th></tr>
+<tr><th colspan="2"><h5><a href="sign in.html">Already have an account?<b>Log in</b></a></h5>
+</table>
+</form>
+</body>
+</html>
